@@ -730,6 +730,120 @@ Here are some basic definitions of the statistics I will be using in my classifi
 
 					</div>
 
+					<article id = "hiphop">
+						<h1 id="has-hip-hop-gotten-worse-web-scraping-and-nlp-project">Has Hip-Hop Gotten Worse? - Web Scraping and NLP Project</h1>
+<p><img src="/docs/assets/rappers.JPG" alt="banner"></p>
+<p><a href="https://www.behance.net/gallery/32828663/Complex-Best-Rapper-Alive-since-1979">SOURCE</a></p>
+<h1 id="links">Links</h1>
+<ul>
+<li><a href="https://jacquelinekclee.github.io/hiphop_nlp_webscrape/">Website</a></li>
+<li><a href="https://github.com/jacquelinekclee/hiphop_nlp_webscrape/">Repository (with all relevant files/data)</a></li>
+</ul>
+<h1 id="table-of-contents">Table of contents</h1>
+<ul>
+<li><a href="#background">Background</a></li>
+<li><a href="#song-selection">Song Selection</a></li>
+<li><a href="#lyrics-source">Lyrics Source</a></li>
+<li><a href="#metrics">Metrics</a></li>
+<li><a href="#goal">Goal</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#findings">Findings</a></li>
+<li><a href="#legality">Legality</a></li>
+<li><a href="#source-files">Source Files</a></li>
+</ul>
+<h2 id="background">Background</h2>
+<p>Hip-hop/rap music was founded in the 1970&#39;s and became widespread during the 80&#39;s, kicking off the decade-long era known as the &quot;golden age&quot; of hip-hop <a href="https://www.npr.org/templates/story/story.php?storyId=7550286#:~:text=Rap%20as%20a%20genre%20began,generally%20interacting%20with%20the%20audience.">(NPR)</a>.</p>
+<p>Today, hip-hop/rap is music&#39;s most popular and commercially successful genre. Every region has its own style of rap and numerous musical and cultural trends have defined hip-hop over the years.</p>
+<p>Many fans believe that rap music has gotten worse over the years, crediting this decline to the rise of what is called <a href="https://www.cleveland.com/entertainment/2017/06/what_is_mumble_rap_25_essentia.html">mumble rap</a>, a style characterized by artists rapping inchorently and/or melodically and using a variety of ad-libs as opposed to actual lyrics. But, while mumble rap has certainly risen in popularity, does this mean that &quot;good&quot; rap, music filled with clever and meaningful lyrics, has vanished from the genre? </p>
+<p>To answer this question, I will be analyzing the lyrics of the best rap song from every year from 1990 to 2020. </p>
+<p><a href="#table-of-contents">(Back to top)</a></p>
+<h2 id="song-selection">Song Selection</h2>
+<p>Songs from 1990-2003 will be pulled from <strong>Complex article, <a href="https://www.complex.com/music/best-rap-songs-since-1979/">&quot;The Best Rap Song, Every Year Since 1979&quot;</a></strong> and the songs from 2004-2020 will be the winners of the <strong><a href="https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Song#Recipients">Grammy Award for Best Rap Song</a></strong> (first awarded in 2004).</p>
+<ul>
+<li>Since many artists have won the Best Rap Song award multiple times (Kanye West, JAY-Z, Kendrick Lamar), this analysis focuses more on whether or not the best of the best rap songs from more current years are just as good as those from the 90&#39;s and early 2000&#39;s rather than finding out if the hip-hop/rap genre as a whole has seen a decline in song quality.</li>
+<li>&quot;The Choice Is Yours&quot; by Black Sheep is not on AZLyrics and also not on Spotify, so I will use one of Complex&#39;s honorable mentions, &quot;My Mind Playin&#39; Tricks On Me&quot; by Geto Boys.</li>
+<li>Complex&#39;s choice for 2002 (&quot;Lose Yourself&quot; by Eminem) is the same as the 2004 Best Rap Song recipient, so similarly I will use one of Complex&#39;s honorable mentions, &quot;Grindin&quot; by The Clipse.</li>
+</ul>
+<p><a href="#table-of-contents">(Back to top)</a></p>
+<h2 id="lyrics-source">Lyrics Source</h2>
+<p>The lyrics for each will be scraped from <strong><a href="https://www.azlyrics.com/">AZLyrics</a></strong>. Since these lyrics are user submitted, the formatting of lyrics is variable. This variation is largely in how chorus lyrics are posted. For example, one song may have all the lyrics to the entire chorus typed out each time whereas another may just use &#39;[Chorus]&#39; or &#39;[2x]&#39; to avoid repetition. My hope is that this will not affect the metrics too much, as songs with shorter/less repetitive choruses can indicate a song&#39;s greater substance and lyrical quality.</p>
+<p><a href="#table-of-contents">(Back to top)</a></p>
+<h2 id="metrics-">Metrics:</h2>
+<ul>
+<li>Proportion of unique words to total words, excluding stop words.<ul>
+<li>Evaluates the range of vocabulary in a given song.</li>
+</ul>
+</li>
+<li>Proportion of stop words to total words.<ul>
+<li>Indicates the substance of a song&#39;s lyrics.</li>
+</ul>
+</li>
+<li>Average number of syllables per bar.<ul>
+<li>Examines a rapper&#39;s skill, as it takes more creativity and ingenuity to fit a greater number of syllables into a bar.</li>
+</ul>
+</li>
+<li>Proportion of exact end rhymes and vowel end rhymes (in every two bars or every other bar) to number of bars.<ul>
+<li>Also examines a rapper&#39;s lyricism.</li>
+<li>Most common rhyme schemes are aabb and abab, so I will only look for these 2.</li>
+<li>I will exclude bars using the same words to create the rhyme scheme. In other words, if two bars are &quot;I like greens / She likes greens,&quot; this rhyme will not be counted as the same word is used. This will be done in attempt to accredit songs that more cleverly create rhyme schemes and to avoid inflating this metric for songs with choruses that may be extremely repetitive (e.g., <a href="https://www.azlyrics.com/lyrics/llcoolj/mamasaidknockyouout.html">&quot;Mama Said Knock You Out&quot; by LL Cool J</a>).</li>
+<li>The fucntions used to analyze rhymes use the Carnegie Mellon University Pronouncing Dictionary. Therefore, the creativity and accents rapper use to manipulate different rhymes will unfortunately not be detected. Thus, this measure will be analyzed with a grain of salt.</li>
+</ul>
+</li>
+<li>Additionally, I will also be looking at the most common words (excluding stop words) for each song. This measure is much more subjective than the others, but could potentially give insight into a song&#39;s substance.</li>
+</ul>
+<p><a href="#table-of-contents">(Back to top)</a></p>
+<p>Here are some quick definitions of terms used in this project:</p>
+<ul>
+<li><strong><a href="https://www.lexico.com/en/definition/bar">Bar</a></strong>: One line of lyrics. Detected by line break characters. Typically takes four beats.</li>
+<li><strong><a href="https://literarydevices.net/end-rhyme/">End rhymes</a></strong>: Rhymes that occur with the last word/syllables of a bar. Example: &quot;I like greens / She likes beans&quot; (greens and beans, the last word of each bar/line, rhyme).</li>
+<li><strong><a href="https://literarydevices.net/exact-rhyme/">Exact rhyme</a></strong>: When the vowel sound and final consonant of two words are phonetically the same, e.g. greens and beans.</li>
+<li><strong><a href="https://www.thefreedictionary.com/vowel+rhyme">Vowel rhyme</a></strong>: When the vowel sound of two words are phonetically the same, e.g. green and seem.</li>
+<li><strong><a href="https://www.geeksforgeeks.org/removing-stop-words-nltk-python">Stop word</a></strong>: A word that does not contribute much meaning, e.g. the, a, an. Search engines are programmed to ignore these words, and ignoring these words both save processing time and allow us to analyze lyrics more meaningfully.</li>
+</ul>
+<p><a href="#table-of-contents">(Back to top)</a></p>
+<h2 id="goal">Goal</h2>
+<p>As stated above, this project has some limitations in terms of the consistency of lyric data, the extent to which the packages/tools used can analyze rap lyrics, and the overall subjectivity of this topic. Ultimately, I started this project as a fun way to both explore one of my interests and utilize the skills and technical knowledge I have learned thus far. But, I certainly believe that the results of this project can give insight into how rap music has evolved over the years.</p>
+<p><a href="#table-of-contents">(Back to top)</a></p>
+<h2 id="usage">Usage</h2>
+<p>Please refer to the <a href="https://nbviewer.jupyter.org/github/jacquelinekclee/hiphop_nlp_webscrape/blob/master/Has%20Hip-Hop%20Gotten%20Worse_.ipynb">Jupyter Notebook viewer</a> to view all the code and visualizations created during this project.</p>
+<p>The <a href="#source-files">source files</a> contain all the functions used to web scrape, process the text, and calcualte the metrics used for the project.</p>
+<p><a href="#table-of-contents">(Back to top)</a></p>
+<h2 id="findings">Findings</h2>
+<p>While all four metrics seemed to decline over the years, <strong>% Unique Rhymes to All Rhymes</strong> (number of unique rhymes / number of all rhymes) proved to be the metric with:</p>
+<ul>
+<li>The strongest correlation coefficient (-0.52)</li>
+<li>Lowest p-value (p = 0.003)</li>
+</ul>
+<p><img src="/docs/assets/rhymes_plot.png" alt="scatter"></p>
+<p>Even though what qualifies as &quot;good music&quot; will always be subjective, quantifying the quality of lyrics in these songs proved to be insightful. The generally weak relationships between each metric and year indicate that any &quot;decline&quot; in hip-hop/rap music may not be as strong as some would assume. </p>
+<p>As mentioned above, hip-hop has become the most popular genre of music. With this ever increasing popularity comes more commercial and lucrative opportunities, and such opportunities are not necessarily conducive to lyrically complex and intricately crafted songs. The genre becoming more commerical and marketable does not mean that there are no lyrically interesting songs being made. But, this trend may contribute to an oversaturated market, where mostly catchy, less intricate songs become popular.</p>
+<p>Overall, this project gives evidence that hip-hop as a genre has not seen a dramatic decline. Instead, changing trends in the music industry and how the public consumes media may affect what types of songs become most popular, but not necessarily the skills of all rappers.  </p>
+<p><a href="#table-of-contents">(Back to top)</a></p>
+<h2 id="source-files">Source Files</h2>
+<ul>
+<li><a href="https://github.com/jacquelinekclee/hiphop_nlp_webscrape/blob/master/web_scrape.py">web_scrape.py</a><ul>
+<li>Has all the functions used for web scraping and processing the HTML. It also processes the string (lyrics) so it&#39;s ready for analyzing the lyrics.</li>
+</ul>
+</li>
+<li><a href="https://github.com/jacquelinekclee/hiphop_nlp_webscrape/blob/master/lyrics.py">lyrics.py</a><ul>
+<li>Used to break down the string of lyrics into bars and words and calculate the word based metrics.</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/jacquelinekclee/hiphop_nlp_webscrape/blob/master/rhyme.py">rhyme.py</a></p>
+<ul>
+<li>Provides the functions used to calculate the rhyme-based metrics</li>
+<li>The contents of this file are adopted from the dandelion package as laid out <a href="https://github.com/DiegoVicen/dandelion">here</a>. Edits made by me (jacquelinekclee) are denoted in the docstrings.</li>
+</ul>
+<h2 id="legality">Legality</h2>
+<p>This personal project was made for the sole intent of applying my skills in Python thus far and as a way to learn new ones. It is intended for non-commercial uses only.</p>
+<p>Some issues with webscraping from AZLyrics arose as I was developing this project because the website detected an unusual amount of activity. An alternative to AZLyrics is
+<a href="https://archive.org/">archive.org</a>, a website that regularly stores archives for various webpages. Nonetheless, using the <a href="https://nbviewer.jupyter.org/github/jacquelinekclee/hiphop_nlp_webscrape/blob/master/Has%20Hip-Hop%20Gotten%20Worse_.ipynb">Jupyter Notebook viewer</a> should not present any issues.</p>
+</li>
+</ul>
+<p><a href="#table-of-contents">(Back to top)</a></p>
+
+					</article>
+
 				<!-- Footer -->
 					<footer id="footer">
 						<p class="copyright">&copy; Group 1 Project A17. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
