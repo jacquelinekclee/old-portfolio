@@ -72,6 +72,11 @@ input, select, textarea {
 	appearance: none;
 }
 
+.explanation {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
 /* Basic */
 
 	@-ms-viewport {
@@ -93,9 +98,9 @@ input, select, textarea {
 	*, *:before, *:after {
 		box-sizing: inherit;
 	}
-
+	/* background color for indiv pages my blue*/
 	body {
-		background: #00629b;
+		background: #211f1f;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -147,7 +152,7 @@ input, select, textarea {
 		}
 
 	 body, input, select, textarea {
-		color: #0e0101;
+		color: #ffffff;
 		font-family: "Source Sans Pro", sans-serif;
 		font-weight: 300;
 		font-size: 1rem;
@@ -168,11 +173,11 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-            background-color: rgb(198,146,20);
+            background-color: rgb(177, 136, 252);
 		}
 
         .test:hover {
-            background-color: rgb(198,146,20);
+            background-color: rgb(177, 136, 252);
 		}
 
 	strong, b {
@@ -189,7 +194,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #000000;
+		color: #ffffff;
 		font-weight: 600;
 		line-height: 1.5;
 		margin: 0 0 1rem 0;
@@ -274,7 +279,7 @@ input, select, textarea {
 	}
 
 	code {
-		background: rgba(255, 255, 255, 0.075);
+		background: rgba(0, 0, 0, 0.075);
 		border-radius: 4px;
 		font-family: "Courier New", monospace;
 		font-size: 0.9rem;
@@ -453,10 +458,10 @@ input, select, textarea {
 		padding-right: 2.75rem;
 		text-overflow: ellipsis;
 	}
-
+	/* background color my blue */
 		select option {
 			color: #ffffff;
-			background: #00629b;
+			background: #211f1f;
 		}
 
 		select:focus::-ms-value {
@@ -542,12 +547,12 @@ input, select, textarea {
 				top: -0.15rem;
 				width: 1.65rem;
 			}
-
+			/* one of my blues */
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
 			background: #ffffff !important;
 			border-color: #ffffff !important;
-			color: #00629b;
+			color: #211f1f;
 			content: '\f00c';
 		}
 
@@ -943,11 +948,11 @@ input, select, textarea {
 			}
 
 				ul.icons li a:hover {
-					background-color: rgba(24, 24, 24, 0.075);
+					background-color: rgba(255, 255, 255, 0.075);
 				}
 
 				ul.icons li a:active {
-					background-color: rgba(24, 24, 24, 0.175);
+					background-color: rgba(255, 255, 255, 0.175);
 				}
 
 /* Table */
@@ -969,7 +974,7 @@ input, select, textarea {
 		}
 
 			table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(24, 24, 24, 0.075);
+				background-color: rgba(255, 255, 255, 0.075);
 			}
 
 		table td {
@@ -1058,7 +1063,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: rgba(24, 24, 24, 0.075);
+			background-color: rgba(255, 255, 255, 0.075);
 		}
 
 		input[type="submit"]:active,
@@ -1066,7 +1071,7 @@ input, select, textarea {
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: rgba(24, 24, 24, 0.175);
+			background-color: rgba(255, 255, 255, 0.175);
 		}
 
 		input[type="submit"].icon:before,
@@ -1094,14 +1099,14 @@ input, select, textarea {
 			height: 2.0625rem;
 			line-height: 2.0625rem;
 		}
-
+		 /* one of my blues */
 		input[type="submit"].primary,
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
 			background-color: #ffffff;
-			color: #00629b !important;
+			color: #211f1f !important;
 			font-weight: 600;
 		}
 
@@ -1258,7 +1263,7 @@ input, select, textarea {
 		}
 
 a:hover { 
-  background-color: rgb(198,146,20);
+  background-color: rgb(177, 136, 252);
 }
 
 /* Header */
@@ -1296,7 +1301,7 @@ a:hover {
 			position: relative;
 			margin-top: 3.5rem;
 		}
-
+			/* changed from white to dark mode #211f1f*/
 			#header > *:before {
 				content: '';
 				display: block;
@@ -1305,7 +1310,7 @@ a:hover {
 				left: calc(50% - 1px);
 				width: 1px;
 				height: calc(3.5rem + 1px);
-				background: #ffffff;
+				background: transparent;
 			}
 
 		#header > :first-child {
@@ -1401,7 +1406,7 @@ a:hover {
 					#header nav ul li a:active {
 						background-color: rgba(255, 255, 255, 0.175);
 					}
-
+		/* changed background from white to dark mode*/				
 		#header nav.use-middle:after {
 			content: '';
 			display: block;
@@ -1410,7 +1415,7 @@ a:hover {
 			left: calc(50% - 1px);
 			width: 1px;
 			height: 100%;
-			background: #ffffff;
+			background: #211f1f;
 		}
 
 		#header nav.use-middle ul li.is-middle {
@@ -1572,7 +1577,8 @@ a:hover {
 			position: relative;
 			width: 100rem;
 			max-width: 100%;
-			background-color: rgb(24, 24, 24);
+			/* change background color from white to dark mode */
+			background-color: transparent;
 			border-radius: 4px;
 			opacity: 10;
 		}
