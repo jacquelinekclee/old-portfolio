@@ -1,13 +1,211 @@
-<!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>twas capstone project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-<!-- Load the element definition -->
-<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-<!-- Simply set the `src` attribute to your MD file and win -->
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<div class="container">
+								<span style="color: rgb(198,146,20)", class="icon fa-dna"></span>
+							</div>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Jacqueline Lee</h1>
+								<br>
+                                <p  style="color: rgba(255, 255, 255, 0.89);"> Click on the boxes below to checkout my projects!
+								</p>
+<nav class>
+    <h2 style="color: rgba(255, 255, 255, 0.89)"> <a style="border-width:3px; border-style:solid; border-color:rgb(198,146,20); padding: 1em; text-align:center" href="#intro" <u>Introduction/Background</u> <a> <a style="border-width:3px; border-style:solid; border-color:rgb(198,146,20); padding: 1em; text-align:center" href="#work" <u>Methods and Data</u> </a> <a style="border-width:3px; border-style:solid; border-color:rgb(198,146,20); padding: 1em; text-align:center" href="#results" <u>Results</u> </a> <a style="border-width:3px; border-style:solid; border-color:rgb(198,146,20); padding: 1em; text-align:center" href="#concl" <u>Conclusion</u> </a> </h2>
+<!-- 							<ol>
+								<li><a style="color: rgba(255, 255, 255, 0.89);" href="#intro">Introduction/Background</a></li>
+								<li><a style="color: rgba(255, 255, 255, 0.89);" href="#work">Methods and Data</a></li>
+								<li><a style="color: rgba(255, 255, 255, 0.89);" href="#results">Results</a></li>
+								<li><a style="color: rgba(255, 255, 255, 0.89);" href="#concl">Conclusion</a></li>
+							</ol> -->
+						</nav>
+							</div>
+						</div>
+						
+					</header>
 
-<img src="assets/images/headshot.jpg" alt="hi" class="inline" width="400" height="300"/>
+				<!-- Main -->
+					<div id="main">
 
-<div style="margin:50 auto;text-align:center">
-  <zero-md src="README.md"></zero-md>
-</div>
+						<!-- Intro -->
+							<article id="intro">
+								<a class="navlist" href="https://jacquelinekclee.github.io/twas-dsc180-a17/"><h2>Home</h2></a>
+                                
+                                <h1 style = "text-align:center">Introduction/Background</h1>
+								
+								<h1>The Problem</h1>
+                                <span class="center"><img src="images/schematic3.png" alt="" width="50%"/></span>
+								<style>
+									img {
+									  display: block;
+									  margin-left: auto;
+									  margin-right: auto;
+									}
+								</style>
+								<p> As seen above, the diseased population may have one variant of DNA (AA), and the non-diseased population may have a different one (AT). The AA in the diseased population's DNA may lead to increased transcripts of a particular gene, which in turns leads to the presence of the disease. Identifying these gene-based mechanism of disease risk is crucial to facilitate early diagnosis and treatment of individuals. Previous approaches attempted to understand this mechanism by detecting key variants associated with gene expression, which in turn is responsible for regulating the production of certain key proteins that can lead to the presence of certain diseases<sup>1</sup>. For example, GWAS finds thousands of trait-associated variants, however, 93% of disease and trait-associated variants emerging from these studies lie within noncoding sequences of the DNA<sup>2</sup>.  It is infeasible to measure gene expression in as many people that are in a GWAS cohort. This also makes it difficult to understand the functionality of these variants and their association with disease risk.
+								</p>
+                                
+                                <h1>What Is TWAS And Why Is It Important?</h1>
+								<p>For our project, we decided to use a technique called TWAS that aggregates variant effects of gene expression and estimates a gene level association<sup>5</sup>. TWAS aims to identify genes that lead to manifestation of complex human traits due to genetically regulated transcriptional activity<sup>6</sup>. It integrates genome-wide association studies (GWAS) and gene expression datasets to identify gene–trait associations . TWAS leverages eQTL cohorts with expression and genotype data to discover gene–trait associations from GWAS summary statistics. The eQTL cohort is then used to find predictive models of gene expression by using allele counts of genetic variants in the gene’s vicinity<sup>7</sup>. The model is then used to impute the genetic component of gene expression in a large sample of people with genotyping results (ex. a GWAS cohort). Finally, TWAS correlates the disease phenotype and predicts gene expression to find disease associated genes<sup>8</sup>. Ultimately TWAS is powerful in identifying the disease associated gene by aggregating the effects of multiple variants into a single testing unit<sup>5</sup>. Identification of a gene, rather than just a variant, can enable scientists to create drugs targeting a specific gene that can potentially offset or mitigate the effects of the associated disease.
+                                </p>  
+                                <h1>The Disease At Hand: IBD</h1>
+								<p>Inflammatory Bowel Disease (IBD) is a highly heritable disease, which causes a chronic inflammation of tissues in an individual’s digestive tract<sup>9</sup>. This disease affects 3.1 million adults in the United States and adversely impacts their quality of life<sup>10</sup>. Even though GWAS has identified hundreds of variants associated with Inflammatory Bowel Disease (IBD), there are few known associated genes. For our project we decided to leverage TWAS to identify the genes associated with IBD. To this end, we collected gene expression data in the blood because IBD is an immune disease and blood will contain the relevant cell types. We also collected GWAS summary statistics (say the sample size of the gwas and in the gene expression data set).
+                                </p>  
+								
+							</article>
+
+						<!-- Work -->
+							<article id="work">
+								<a class="navlist" href="https://jacquelinekclee.github.io/twas-dsc180-a17/"><h2>Home</h2></a>
+                                <h1 style = "text-align:center">The Data and Methods</h1>
+                                <h1>The Data</h1>
+                                <p>
+                                    <ul>
+										<li>The genotype data comes from the 1000 Genomes Project and contains information on millions of single nucleotide polymorphisms (SNPs), or individual variants of DNA, on chromosome 22.</li>
+										<li>The gene expression data comes from the Geuvadis RNA-sequencing project.</li>
+										<li>Combined, these sources contain genetic data for 421 individuals across five populations: people of Northern and Western European Ancestry from Utah (CEU), Fins (FIN), British (GBR), Toscani (YRI), and Yoruba (YRI).</li>
+										<li>The genome wide association study (GWAS) summary statistics for IBD were obtained from the analysis carried out in the paper Finucane 2015 Nature Genetics.</li>
+									</ul>
+                                </p>
+								<div class="row">
+                                  <div class="column">
+                                    <img src="images/1000genomes.jpg" alt="Snow" style="width:50%, height:50%">
+                                  </div>
+                                  <div class="column">
+                                    <img src="images/geuvadis-logo.jpg" alt="Forest" style="width:50%, height:50%">
+                                  </div>
+                                </div>
+								<h1>Methods Flow</h1>
+								<p>
+									<span class="center"><img src="images/flowchart4.png" alt="" width="75%"/></span>
+									<style>
+									img {
+									  display: block;
+									  margin-left: auto;
+									  margin-right: auto;
+									}
+									</style>
+                                </p>
+								<p>As seen above, first the genotype data is extracted with Plink. Then this extracted data, the gene expression data, and the population data are fed into the TWAS/FUSION software to calculate model weights for each gene, where heritability of each feature is estimated. The models used are the linear model that regresses SNPs on gene expression, Lasso Regularization, and ElasticNet, as seen below:
+								</p>
+                        <span class="center"><img src="images/equation.png" alt="" width="50%"/></span>
+								<style>
+									img {
+									  display: block;
+									  margin-left: auto;
+									  margin-right: auto;
+									}
+								</style>
+                        <p>These model weights are compared with the GWAS summary statistics for IBD and linearly combined to create a standardize Z-score, whose equation is seen below. These Z-scores are used to find p-values and identify significant associations between genes and IBD.
+                        <span class="center"><img src="images/zscore.png" alt="" width="50%"/></span>
+                            <style>
+                                img {
+                                  display: block;
+                                  margin-left: auto;
+                                  margin-right: auto;
+                                }
+                            </style>
+                        </p>
+                        </article>
+						<!-- Results -->
+							<article id="results">
+								<a class="navlist" href="https://jacquelinekclee.github.io/twas-dsc180-a17/"><h2>Home</h2></a>
+								
+								<h1 style = "text-align:center">Results</h1>
+								<p>Out of 633 genes on chromosome 22, TWAS found 100 genes that are highly heritable with IBD, 7 of which had a significant association with IBD. Of the seven genes, 5 of them were very close together and shared the same best GWAS SNP, which might suggest that they contribute to the same signal. Gene PDGFB had the most significant association with a p-value of 4.17 x 10<sup>−17</sup>.
+								</p>
+								
+								<p>
+									<span class="center"><img src="images/manhattan.png" alt="" width="75%"></span>
+									<style>
+									img {
+									  display: block;
+									  margin-left: auto;
+									  margin-right: auto;
+									}
+									</style>
+                                </p>
+								
+
+
+								<p>For 45 out of 100 of the genes, the best model was using the single best eQTL technique. This is summarized below.
+                                </p>
+                                
+                                <p>
+									<span class="center"><img src="images/genes_by_model.png" alt="" width="75%"></span>
+									<style>
+									img {
+									  display: block;
+									  margin-left: auto;
+									  margin-right: auto;
+									}
+									</style>
+                                </p>
+                                
+                                <p>R<sup>2</sup> was bounded by heritability, as expected.
+                                </p>
+                                
+                                <p>
+									<span class="center"><img src="images/ibd.dat_herit_rsquared_scatter.png" alt="" width="75%"></span>
+									<style>
+									img {
+									  display: block;
+									  margin-left: auto;
+									  margin-right: auto;
+									}
+									</style>
+                                </p>
+
+								
+						</article>
+
+						<!-- Contact -->
+							<article id="concl">
+								<a class="navlist" href="https://jacquelinekclee.github.io/twas-dsc180-a17/"><h2>Home</h2></a>
+                                <h1 style = "text-align:center">Conclusion</h1>
+								<p> TWAS was ultimately able to identify 7 genes that are associated with IBD. One of the genes, A4GALT, did not have any genome-wide significant GWAS SNPs nearby. This highlights that TWAS is able to find signals that may not be capable using only GWAS SNPs. Our findings can be verified by other sources. For example, Marigorta et. al (2017) showed that there was an association between SYNGR1 and IBD, which our analysis also identified. Identification of these genes can be useful for disease prevention and early detection
+								</p>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Group 1 Project A17. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
