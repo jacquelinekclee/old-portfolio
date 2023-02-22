@@ -177,6 +177,40 @@ input, select, textarea {
     vertical-align: middle;
 }
 
+/*toolbar*/
+/* The navigation bar */
+.navbar {
+	overflow: hidden;
+	background-color: black;
+	position: fixed; /* Set the navbar to fixed position */
+	top: 0; /* Position the navbar at the top of the page */
+	width: 100%; /* Full width */
+	z-index: 5;
+	text-align: center;
+  }
+
+#main .navbar{
+	display: none;
+	visibility: hidden;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	height: 100px;
+  }
+  
+  /* Change background on mouse-over */
+  .navbar a:hover {
+	background: rgb(177, 136, 252);
+	color: white;
+  }
+
 /* Basic */
 
 	@-ms-viewport {
@@ -1330,7 +1364,7 @@ input, select, textarea {
 		min-height: 100vh;
 		width: 100%;
 		padding: 4rem 2rem;
-		z-index: 3;
+		z-index: 4;
 	}
 
 		#wrapper:before {
@@ -1391,6 +1425,7 @@ a:hover {
 		background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
 		max-width: 100%;
 		text-align: center;
+		z-index: 2;
 	}
 
 		#header > * {
@@ -1664,7 +1699,7 @@ a:hover {
 		flex-direction: column;
 		position: relative;
 		max-width: 100%;
-		z-index: 3;
+		z-index: 4;
 	}
 
 		#main article {
