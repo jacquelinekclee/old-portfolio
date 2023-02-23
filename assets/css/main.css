@@ -64,14 +64,14 @@ ol, ul {
   
   
   .gallery__item--1 {
-	grid-column-start: 1;
+	grid-column-start: 2;
 	grid-column-end: 3;
 	grid-row-start: 1;
 	grid-row-end: 2;
   }
   
   .gallery__item--2 {
-	grid-column-start: 3;
+	grid-column-start: 4;
 	grid-column-end: 5;
 	grid-row-start: 1;
 	grid-row-end: 2;
@@ -85,14 +85,14 @@ ol, ul {
   }
   
   .gallery__item--4 {
-	grid-column-start: 1;
+	grid-column-start: 2;
 	grid-column-end: 3;
 	grid-row-start: 2;
 	grid-row-end: 5;
   }
   
   .gallery__item--5 {
-	grid-column-start: 3;
+	grid-column-start: 4;
 	grid-column-end: 5;
 	grid-row-start: 2;
 	grid-row-end: 5;
@@ -106,14 +106,14 @@ ol, ul {
   }
 
   .gallery__item--7 {
-	grid-column-start: 1;
+	grid-column-start: 2;
 	grid-column-end: 3;
 	grid-row-start: 5;
 	grid-row-end: 7;
   }
   
   .gallery__item--8 {
-	grid-column-start: 3;
+	grid-column-start: 4;
 	grid-column-end: 5;
 	grid-row-start: 5;
 	grid-row-end: 7;
@@ -209,6 +209,11 @@ input, select, textarea {
   
   /* Change background on mouse-over */
   .navbar a:hover {
+	background: rgb(177, 136, 252);
+	color: white;
+  }
+
+  .a h2:hover{
 	background: rgb(177, 136, 252);
 	color: white;
   }
