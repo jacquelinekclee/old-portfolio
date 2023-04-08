@@ -528,21 +528,6 @@
 							<li><a href="https://jacquelinekclee.github.io/nba-players-position-classifier/">Website</a></li>
 							<li><a href="https://github.com/jacquelinekclee/nba-players-position-classifier">Repository (with all relevant files/data)</a></li>
 							</ul>
-							<h1 id="table-of-contents">Table of contents</h1>
-							<ul>
-							<li><a href="#background">Background</a></li>
-							<li><a href="#the-statistics">The Statistics</a></li>
-							<li><a href="#statistics-source">Statistics Source</a></li>
-							<li><a href="#the-methodology">The Methodology</a><ul>
-							<li><a href="#training">Training</a></li>
-							<li><a href="#final-model">Final Model</a></li>
-							</ul>
-							</li>
-							<li><a href="#usage">Usage</a></li>
-							<li><a href="#findings">Findings</a></li>
-							<li><a href="#source-file">Source File</a></li>
-							<li><a href="#legality">Legality</a></li>
-							</ul>
 							<h2 id="background">Background</h2>
 							<p>As someone who has been playing basketball since the second grade and has been a Warriors fan since birth, the NBA and basketball in general have always held a special place in my heart. As time goes on, statistics and analytics have played an increasingly larger role in the world of basketball. With this project, and my <a href="https://jacquelinekclee.github.io/nba-all-stars-classifier.github.io/">NBA All Stars Classifier</a>, I wanted to use my love of basketball in developing and praciticing new Data Science skills.</p>
 							<p>As basketball players have gotten more skilled and talented and as the game itself has revolutionized, the notion of positions increasingly becomes a dated aspect of the game. The commissioner of the NBA, Adam Silver, acknowledged that the NBA <a href="https://www.nba.com/news/nba-commissioner-adam-silver-discusses-leagues-positionless-basketball-at-annual-finals-press-conference">&quot;has moved increasingly to positionless basketball&quot;</a> when discussing the possibility of removing positions from the All-NBA decision process, which honors the best players in the league. </p>
@@ -560,7 +545,6 @@
 							<li>Blocks per game (BPG): a metric that shows how many total blocks a player averages per game.</li>
 							<li>Steals per game (SPG): a metric that shows how many total steals a player averages per game.</li>
 							</ul>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 							<h2 id="statistics-source">Statistics Source</h2>
 							<p>The training data comes from <a href="https://www.kaggle.com/drgilermo/nba-players-stats?select=Seasons_Stats.csv">Kaggle</a>. The test data come from <a href="https://www.basketball-reference.com/">Basketball Reference</a>:</p>
 							<ul>
@@ -568,11 +552,9 @@
 							<li><a href="https://www.basketball-reference.com/leagues/NBA_2021_per_game.html">2020-21 Data</a></li>
 							<li><a href="https://www.basketball-reference.com/leagues/NBA_2022_per_game.html">2021-22 Data</a></li>
 							</ul>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 							<h2 id="usage">Usage</h2>
 							<p>Please refer to the <a href="https://nbviewer.org/github/jacquelinekclee/nba-players-position-classifier/blob/0d3b4b07abce345b5b50566b95ac793e7ba10c5d/nba_positions_classifier.ipynb">Jupyter Notebook Viewer</a> or the <a href="https://github.com/jacquelinekclee/nba-players-position-classifier/blob/0d3b4b07abce345b5b50566b95ac793e7ba10c5d/nba_positions_classifier.ipynb">.ipynb file</a> to view all the code for the classifier. The notebook with all the data cleaning can be seen <a href="https://github.com/jacquelinekclee/nba-players-position-classifier/blob/0d3b4b07abce345b5b50566b95ac793e7ba10c5d/nba_players_data_cleaning.ipynb">here</a>. </p>
 							<p>The <a href="#source-file">source file</a> contains all the functions used to clean/manipulate the data and DataFrames.</p>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 							<h2 id="the-methodology">The Methodology</h2>
 							<p>In the initial data cleaning process, the players&#39; positions were simplified to include 5 classes: </p>
 							<table>
@@ -618,7 +600,6 @@
 							<li>All Star: whether that player was an All Star that season</li>
 							<li>MVP: whether that player was the MVP that season</li>
 							</ul>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 							<h2 id="training">Training</h2>
 							<p>Using Scikit&#39;s <code>GridSearchCV</code>, I tested out several combinations of different hyperparameters. The training times for both models were extremely <em>long</em>. See below for the paramters tested for each type of model:</p>
 							<p>Parameters tested for random forests:
@@ -751,7 +732,6 @@
 							</tbody>
 							</table>
 							<p>Clearly, this model performed much better than the 1st round. However, it started performing worse for the more recent seasons. This may be some indication of a shift coming in basketball, where players&#39; statistics and general playstyles don&#39;t reflect the typical notions of positions in seasons prior. </p>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 							<h2 id="findings">Findings</h2>
 							<p>Draymond Green, Ben Simmons, Giannis Antetokounmpo, LeBron James, Kevin Durant, Nikola Jokić, and Jayson Tatum are some consensus &quot;positionless&quot; NBA players (see this <a href="&#39;https://bleacherreport.com/articles/2627364-5-unique-nba-players-who-dont-fit-in-a-category&#39;">CBS article</a> and this <a href="&#39;https://bleacherreport.com/articles/2627364-5-unique-nba-players-who-dont-fit-in-a-category&#39;">Blearcher Report article</a>). One might expect the classifier to predict these players&#39; posititions <em>incorrectly</em> if they are truly &quot;positionless.&quot; As with all things basketball, several things transcend the stat sheet, but hopefully these results provide some interesting insights! The table below shows the correct position (Pos) and the model&#39;s prediction (pos_pred) for these &quot;positionless&quot; players:</p>
 							<table>
@@ -837,7 +817,6 @@
 							</ul>
 							<h2 id="legality">Legality</h2>
 							<p>This personal project was made for the sole intent of applying my skills in Python thus far and as a way to learn new ones. It is intended for non-commercial uses only.</p>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 
 															
 						</article>
@@ -852,26 +831,11 @@
 							<li><a href="https://jacquelinekclee.github.io/nba-all-stars-logistic-regression/">Website</a></li>
 							<li><a href="https://github.com/jacquelinekclee/nba-all-stars-logistic-regression">Repository (with all relevant files/data)</a></li>
 							</ul>
-							<h1 id="table-of-contents">Table of contents</h1>
-							<ul>
-							<li><a href="#background">Background</a></li>
-							<li><a href="#the-statistics">The Statistics</a></li>
-							<li><a href="#statistics-source">Statistics Source</a></li>
-							<li><a href="#the-methodology">The Methodology</a><ul>
-							<li><a href="#training">Training</a></li>
-							</ul>
-							</li>
-							<li><a href="#usage">Usage</a></li>
-							<li><a href="#findings">Findings</a></li>
-							<li><a href="#the-results">The Results</a></li>
-							<li><a href="#source-file">Source File</a></li>
-							<li><a href="#legality">Legality</a></li>
-							</ul>
+							
 							<h2 id="background">Background</h2>
 							<p>As someone who has been playing basketball since the second grade and has been a Warriors fan since birth, the NBA and basketball in general have always held a special place in my heart. As time goes on, statistics and analytics have played an increasingly larger role in the world of basketball. With this project, and my <a href="https://jacquelinekclee.github.io/nba-players-position-classifier.github.io/">NBA Player Position Classifier</a>, I wanted to use my love of basketball in developing and praciticing new Data Science skills.</p>
 							<p>This classifier, specifically a Logistic Regression Classifier, uses statistics from nearly 19,000 players&#39; seasons from 1980-2017. I will then test my classifier using statistics from the 2018-19 season, the 2020-21 season (skipping the season interrupted by the pandemic), the 2021-22 season, and the most recent season, 2022-23. Given that all star voting involves non-expert (fan) voting and some level of subjectivity, hopefully the results will help reveal which players&#39; All Star designation(s) match the data, which players were overlooked, and which players were perhaps overrated. </p>
 							<p>Logistic Regression is a good fit for this model because all features are numeric, and there are many features that are best served by a multiple regression. </p>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 							<h2 id="the-statistics">The Statistics</h2>
 							<p>The NBA tracks almost 50 different statistics for every player in the league. Many statistics are often unknown to most basketball fans, so using only the common statistics will make the most sense for everyone. 
 							Here are some basic definitions of the statistics I will be using in my classifier:</p>
@@ -883,7 +847,6 @@
 							<li>Blocks per game (BPG): a metric that shows how many total blocks a player averages per game.</li>
 							<li>Steals per game (SPG): a metric that shows how many total steals a player averages per game.</li>
 							</ul>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 							<h2 id="statistics-source">Statistics Source</h2>
 							<p>The training data comes from <a href="https://www.kaggle.com/drgilermo/nba-players-stats?select=Seasons_Stats.csv">Kaggle</a>. The test data come from <a href="https://www.basketball-reference.com/">Basketball Reference</a>:</p>
 							<ul>
@@ -892,14 +855,11 @@
 							<li><a href="https://www.basketball-reference.com/leagues/NBA_2022_per_game.html">2021-22 Data</a></li>
 							<li><a href="https://www.basketball-reference.com/leagues/NBA_2023_per_game.html">2022-23 Data</a></li>
 							</ul>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 							<h2 id="usage">Usage</h2>
 							<p>Please refer to the <a href="https://nbviewer.org/github/jacquelinekclee/nba-all-stars-logistic-regression/blob/main/nba_all_stars_logregr.ipynb">Jupyter Notebook Viewer</a> or the <a href="https://github.com/jacquelinekclee/nba-all-stars-logistic-regression/blob/main/nba_all_stars_logregr.ipynb">.ipynb file</a> to view all the code for the classifier. The notebook with all the data cleaning can be seen <a href="https://github.com/jacquelinekclee/nba-all-stars-logistic-regression/blob/main/nba_players_data_cleaning.ipynb">here</a>. </p>
 							<p>The <a href="#source-file">source file</a> contains all the functions used to clean/manipulate the data and DataFrames.</p>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 							<h2 id="the-methodology">The Methodology</h2>
 							<p>Since there are many features being used, a classifier involving distance like K-Nearest Neighbors would not be the most straightforward; K-NN loses interpretability with higher dimensions. Thus, with the relatively large (&gt;2) amount of numerical features, logistic regression is the logical choice.  Additionally, instead of using accuracy as the evaluation metric, recall was chosen instead given my interest in capturing all the All Star players in each season. In addition to looking at recall, I also looked at the X highest probabilities for a given season, where X is the number of All Stars selected, to see how well the model could replicate the real life decision process.</p>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 							<h2 id="training">Training</h2>
 							<p>The main hyperparamter in logistic regression involve the type of regularization used. See below for the hyperparameters tested in grid search:</p>
 							<p>Parameters tested:
@@ -907,7 +867,6 @@
 							<p>Best paramters:
 							<code>{&#39;regr__C&#39;: 100.0, &#39;regr__penalty&#39;: &#39;l2&#39;}</code></p>
 							<p>All numeric features were scaled, and the only non-numeric feature, player position, was one-hot encoded. Another version was also trained in which numeric features were scaled with respect to the statistic&#39;s specific season. </p>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 							<h2 id="findings">Findings</h2>
 							<p>Below is a table summarizing the performances of the different test sets. V2 references the model that was trained/tested with scaling the numeric features with respect to season. </p>
 							<table>
@@ -1013,7 +972,6 @@
 							<li>Kristaps Porzingis (2020-21, 2021-22, 2022-23)</li>
 							</ul>
 							<p>For 2 seasons in a row, young guard Shai Gilgeous-Alexander was &quot;underrated&quot; in the eyes of the model. His team, the OKC Thunder, had a terrible record this past season and finished in 14th place in the Western Conference. This lack of winning, and the fact that OKC is a smaller market, may explain why Gilgeous-Alexander was overlooked in all star voting. But in the most recent season (2022-23), he was finally chosen as an all star, perhaps because his team has done slightly better. </p>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 							<h2 id="source-file">Source File</h2>
 							<ul>
 							<li><a href="https://github.com/jacquelinekclee/nba-all-stars-logistic-regression/blob/main/nba_players_classification.py">nba_players_classification.py</a><ul>
@@ -1023,7 +981,6 @@
 							</ul>
 							<h2 id="legality">Legality</h2>
 							<p>This personal project was made for the sole intent of applying my skills in Python thus far and as a way to learn new ones. It is intended for non-commercial uses only.</p>
-							<p><a href="#table-of-contents">(Back to top)</a></p>
 
 							
 							
@@ -1041,24 +998,12 @@
 								<li><a href="https://jacquelinekclee.github.io/hiphop_nlp_webscrape/">Website</a></li>
 								<li><a href="https://github.com/jacquelinekclee/hiphop_nlp_webscrape/">Repository (with all relevant files/data)</a></li>
 								</ul>
-								<h1 id="table-of-contents">Table of contents</h1>
-								<ul>
-									<li><a href="#background">Background</a></li>
-									<li><a href="#song-selection">Song Selection</a></li>
-									<li><a href="#lyrics-source">Lyrics Source</a></li>
-									<li><a href="#metrics">Metrics</a></li>
-									<li><a href="#goal">Goal</a></li>
-									<li><a href="#usage">Usage</a></li>
-									<li><a href="#findings">Findings</a></li>
-									<li><a href="#legality">Legality</a></li>
-									<li><a href="#source-files">Source Files</a></li>
-								</ul>
+								
 								<h2 id="background">Background</h2>
 								<p>Hip-hop/rap music was founded in the 1970&#39;s and became widespread during the 80&#39;s, kicking off the decade-long era known as the &quot;golden age&quot; of hip-hop <a href="https://www.npr.org/templates/story/story.php?storyId=7550286#:~:text=Rap%20as%20a%20genre%20began,generally%20interacting%20with%20the%20audience.">(NPR)</a>.</p>
 								<p>Today, hip-hop/rap is music&#39;s most popular and commercially successful genre. Every region has its own style of rap and numerous musical and cultural trends have defined hip-hop over the years.</p>
 								<p>Many fans believe that rap music has gotten worse over the years, crediting this decline to the rise of what is called <a href="https://www.cleveland.com/entertainment/2017/06/what_is_mumble_rap_25_essentia.html">mumble rap</a>, a style characterized by artists rapping inchorently and/or melodically and using a variety of ad-libs as opposed to actual lyrics. But, while mumble rap has certainly risen in popularity, does this mean that &quot;good&quot; rap, music filled with clever and meaningful lyrics, has vanished from the genre? </p>
 								<p>To answer this question, I will be analyzing the lyrics of the best rap song from every year from 1990 to 2020. </p>
-								<p><a href="#table-of-contents">(Back to top)</a></p>
 								<h2 id="song-selection">Song Selection</h2>
 								<p>Songs from 1990-2003 will be pulled from <strong>Complex article, <a href="https://www.complex.com/music/best-rap-songs-since-1979/">&quot;The Best Rap Song, Every Year Since 1979&quot;</a></strong> and the songs from 2004-2020 will be the winners of the <strong><a href="https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Song#Recipients">Grammy Award for Best Rap Song</a></strong> (first awarded in 2004).</p>
 								<ul>
@@ -1066,10 +1011,8 @@
 								<li>&quot;The Choice Is Yours&quot; by Black Sheep is not on AZLyrics and also not on Spotify, so I will use one of Complex&#39;s honorable mentions, &quot;My Mind Playin&#39; Tricks On Me&quot; by Geto Boys.</li>
 								<li>Complex&#39;s choice for 2002 (&quot;Lose Yourself&quot; by Eminem) is the same as the 2004 Best Rap Song recipient, so similarly I will use one of Complex&#39;s honorable mentions, &quot;Grindin&quot; by The Clipse.</li>
 								</ul>
-								<p><a href="#table-of-contents">(Back to top)</a></p>
 								<h2 id="lyrics-source">Lyrics Source</h2>
 								<p>The lyrics for each will be scraped from <strong><a href="https://www.azlyrics.com/">AZLyrics</a></strong>. Since these lyrics are user submitted, the formatting of lyrics is variable. This variation is largely in how chorus lyrics are posted. For example, one song may have all the lyrics to the entire chorus typed out each time whereas another may just use &#39;[Chorus]&#39; or &#39;[2x]&#39; to avoid repetition. My hope is that this will not affect the metrics too much, as songs with shorter/less repetitive choruses can indicate a song&#39;s greater substance and lyrical quality.</p>
-								<p><a href="#table-of-contents">(Back to top)</a></p>
 								<h2 id="metrics-">Metrics:</h2>
 								<ul>
 									<li>Proportion of unique words to total words, excluding stop words.<ul>
@@ -1093,7 +1036,6 @@
 								</li>
 								<li>Additionally, I will also be looking at the most common words (excluding stop words) for each song. This measure is much more subjective than the others, but could potentially give insight into a song&#39;s substance.</li>
 								</ul>
-								<p><a href="#table-of-contents">(Back to top)</a></p>
 								<p>Here are some quick definitions of terms used in this project:</p>
 								<ul>
 								<li><strong><a href="https://www.lexico.com/en/definition/bar">Bar</a></strong>: One line of lyrics. Detected by line break characters. Typically takes four beats.</li>
@@ -1102,14 +1044,11 @@
 								<li><strong><a href="https://www.thefreedictionary.com/vowel+rhyme">Vowel rhyme</a></strong>: When the vowel sound of two words are phonetically the same, e.g. green and seem.</li>
 								<li><strong><a href="https://www.geeksforgeeks.org/removing-stop-words-nltk-python">Stop word</a></strong>: A word that does not contribute much meaning, e.g. the, a, an. Search engines are programmed to ignore these words, and ignoring these words both save processing time and allow us to analyze lyrics more meaningfully.</li>
 								</ul>
-								<p><a href="#table-of-contents">(Back to top)</a></p>
 								<h2 id="goal">Goal</h2>
 								<p>As stated above, this project has some limitations in terms of the consistency of lyric data, the extent to which the packages/tools used can analyze rap lyrics, and the overall subjectivity of this topic. Ultimately, I started this project as a fun way to both explore one of my interests and utilize the skills and technical knowledge I have learned thus far. But, I certainly believe that the results of this project can give insight into how rap music has evolved over the years.</p>
-								<p><a href="#table-of-contents">(Back to top)</a></p>
 								<h2 id="usage">Usage</h2>
 								<p>Please refer to the <a href="https://nbviewer.jupyter.org/github/jacquelinekclee/hiphop_nlp_webscrape/blob/master/Has%20Hip-Hop%20Gotten%20Worse_.ipynb">Jupyter Notebook viewer</a> to view all the code and visualizations created during this project.</p>
 								<p>The <a href="#source-files">source files</a> contain all the functions used to web scrape, process the text, and calcualte the metrics used for the project.</p>
-								<p><a href="#table-of-contents">(Back to top)</a></p>
 								<h2 id="findings">Findings</h2>
 								<p>While all four metrics seemed to decline over the years, <strong>% Unique Rhymes to All Rhymes</strong> (number of unique rhymes / number of all rhymes) proved to be the metric with:</p>
 								<ul>
@@ -1120,7 +1059,6 @@
 								<p>Even though what qualifies as &quot;good music&quot; will always be subjective, quantifying the quality of lyrics in these songs proved to be insightful. The generally weak relationships between each metric and year indicate that any &quot;decline&quot; in hip-hop/rap music may not be as strong as some would assume. </p>
 								<p>As mentioned above, hip-hop has become the most popular genre of music. With this ever increasing popularity comes more commercial and lucrative opportunities, and such opportunities are not necessarily conducive to lyrically complex and intricately crafted songs. The genre becoming more commerical and marketable does not mean that there are no lyrically interesting songs being made. But, this trend may contribute to an oversaturated market, where mostly catchy, less intricate songs become popular.</p>
 								<p>Overall, this project gives evidence that hip-hop as a genre has not seen a dramatic decline. Instead, changing trends in the music industry and how the public consumes media may affect what types of songs become most popular, but not necessarily the skills of all rappers.  </p>
-								<p><a href="#table-of-contents">(Back to top)</a></p>
 								<h2 id="source-files">Source Files</h2>
 								<ul>
 								<li><a href="https://github.com/jacquelinekclee/hiphop_nlp_webscrape/blob/master/web_scrape.py">web_scrape.py</a><ul>
@@ -1142,7 +1080,6 @@
 								<a href="https://archive.org/">archive.org</a>, a website that regularly stores archives for various webpages. Nonetheless, using the <a href="https://nbviewer.jupyter.org/github/jacquelinekclee/hiphop_nlp_webscrape/blob/master/Has%20Hip-Hop%20Gotten%20Worse_.ipynb">Jupyter Notebook viewer</a> should not present any issues.</p>
 								</li>
 								</ul>
-								<p><a href="#table-of-contents">(Back to top)</a></p>
 
 						</article>
 
