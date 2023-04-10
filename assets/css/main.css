@@ -1787,7 +1787,9 @@ a:hover {
 
 				#main article .close:before {
 					top: 0.875rem;
-					left: 0.875rem;
+/* 					left: 0.875rem; */
+					right: 0.875rem;
+					position: fixed;
 					width: 2.25rem;
 					height: 2.25rem;
 					background-size: 14px 14px;
