@@ -1738,8 +1738,8 @@ a:hover {
 
 			#main article .close {
 				display: block;
-/* 				position: absolute; */
-				position: fixed;
+				position: absolute;
+/* 				position: fixed; */
 				top: 0;
 				right: 0;
 				width: 4rem;
@@ -1757,11 +1757,11 @@ a:hover {
 					transition: background-color 0.2s ease-in-out;
 					content: '';
 					display: block;
-/* 					position: absolute; */
-					position: fixed;
+					position: absolute;
+/* 					position: fixed; */
 					top: 0.75rem;
-/* 					left: 0.75rem; */
-					right: 0.75rem;
+					left: 0.75rem;
+/* 					right: 0.75rem; */
 					width: 2.5rem;
 					height: 2.5rem;
 					border-radius: 100%;
@@ -1787,8 +1787,8 @@ a:hover {
 
 				#main article .close:before {
 					top: 0.875rem;
-/* 					left: 0.875rem; */
-					right: 0.875rem;
+					left: 0.875rem;
+/* 					right: 0.875rem; */
 					position: fixed;
 					width: 2.25rem;
 					height: 2.25rem;
