@@ -1760,7 +1760,8 @@ a:hover {
 /* 					position: absolute; */
 					position: fixed;
 					top: 0.75rem;
-					left: 0.75rem;
+/* 					left: 0.75rem; */
+					right: 0.75rem;
 					width: 2.5rem;
 					height: 2.5rem;
 					border-radius: 100%;
