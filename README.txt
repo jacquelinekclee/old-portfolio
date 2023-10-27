@@ -1,4 +1,4 @@
-Access portfolio [HERE](https://jacquelinekclee.github.io/)
+Access portfolio: https://jacquelinekclee.github.io/
 
 Dimension by HTML5 UP
 html5up.net | @ajlkn
